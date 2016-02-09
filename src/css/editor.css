@@ -1,0 +1,111 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  position: relative;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+svg {
+/*
+  For IE9. Without, occasionally draws shapes
+  outside the boundaries of <svg> rectangle.
+*/
+  overflow: hidden;
+}
+
+body {
+	background: #eee url(img/body.jpg);
+	font-family: arial;
+	font-size: 11px;
+	font-weight: 700;
+	color: #333;
+}
+
+.node {
+  position: absolute;
+  min-width: 200px;
+  max-width: 200px;
+  min-height: 30px;
+  border: 1px solid #999;
+  background: #fff;
+  padding: 10px;
+
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+
+  -webkit-box-shadow: 0 0 10px 0px rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px 0px rgba(0,0,0,0.3);
+
+  cursor: pointer;
+}
+
+.node-port  {
+  float: left;
+  width: 100%;
+}
+
+.node-port-in {
+	float: left;
+  z-index: 1000;
+  display: inline-block;
+  width: 70px;
+  height: 20px;
+  background: #C0CAFF;
+}
+
+.node-port-out {
+	float: right;
+  z-index: 1000;
+  display: inline-block;
+  width: 70px;
+  height: 20px;
+  background: #C0CAFF;
+}
+
+.node-promotion,
+.node-targetGroup {
+	width: 15px;
+	height: 15px;
+	min-width: 15px;
+	max-width: 15px;
+	min-height: 0px;
+	top: 50%;
+	text-align: center;
+	font-size: 24px;
+	line-height: 15px;
+}
+
+.node-promotion {
+	left: 50px;
+	background: #DCFFC0;
+}
+
+.node-action {
+	background: #F3F1C3;
+}
+
+.node-targetGroup {
+	right: 50px;
+	background: #C0CAFF;
+}
+
+.node-title {
+	font-size: 120%;
+	font-weight: 700;
+	line-height: 20px;
+}
+
+.node-content {
+	font-weight: 100;
+}
+
+.jsplumb-connector { z-index:4; }
+.jsplumb-endpoint { z-index:5; }
+.jsplumb-overlay { z-index:6; }
